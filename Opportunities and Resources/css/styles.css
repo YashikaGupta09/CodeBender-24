@@ -98,6 +98,21 @@ a:hover {
         grid-template-columns: auto auto;
         grid-gap: 2%;
     }
+    #footer{
+        margin-top: 1500px;
+    }
+    #footerr{
+        margin-top: 100px;
+    }
+    #s2{
+        margin-top: 50px;
+    }
+    #s3{
+        margin-top: 200px;
+    }
+    #s5{
+        margin-top: 70px;
+    }
 }
 
 @media only screen and (max-width: 550px) {
