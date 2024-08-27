@@ -8,12 +8,12 @@ body {
 
 a {
     text-decoration: none;
-    color: inherit
+    color: inherit;
 }
 
 a:hover {
     text-decoration: none;
-    color: inherit
+    color: inherit;
 }
 
 .heading {
@@ -33,44 +33,83 @@ a:hover {
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;
-    padding: 5% 8%;
+    padding: 5% 7%;
 }
-
 .grid-item {
+    position: relative;
     border-radius: 1rem;
     padding: 5%;
-    margin:5%;
+    margin: 5%;
+    box-shadow: 0 10px 30px rgba(0,0,0,.1);
+    overflow: hidden;
+    color: #777;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    z-index: 1; /* Ensure grid-item is above the pseudo-element */
 }
 
+.grid-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: calc(-100% + 4px);
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: -9; /* Ensure the pseudo-element is below the text */
+    transition: .3s ease-in-out;
+}
+
+.grid-item:hover::before {
+    bottom: 0;
+}
 .grid-item:hover{
-    padding:7%;
-    margin:3%;
+    color: #fff;
+}
+.grid-item:nth-child(6n-5)::before {
+    background: #E31D65;
 }
 
-.grid-item:nth-child(6n-5) {
-    background-color: #E31D65;
-    color: white;
+.grid-item:nth-child(6n-4)::before {
+    background: #FF7C35;
 }
 
-.grid-item:nth-child(6n-4) {
-    background-color: #FF7C35;
+.grid-item:nth-child(6n-3)::before {
+    background: #FFCB36;
 }
 
-.grid-item:nth-child(6n-3) {
-    background-color: #FFCB36;
+.grid-item:nth-child(6n-2)::before {
+    background: #25A853;
 }
 
-.grid-item:nth-child(6n-2) {
-    background-color: #25A853;
+.grid-item:nth-child(6n-1)::before {
+    background: #007D97;
 }
 
-.grid-item:nth-child(6n-1) {
-    background-color: #007D97;
+.grid-item:nth-child(6n)::before {
+    background: #553AB8;
+}
+.grid-item:hover {
+    padding: 7%;
+    margin: 3%;
 }
 
-.grid-item:nth-child(6n) {
-    background-color: #553AB8;
-    color: white;
+.grid-item div {
+    position: relative;
+    z-index: 999; /* Ensure text is above the pseudo-element */
+}
+
+.grid-item div h2,
+.grid-item div p {
+    transition: .3s;
+    color: #777; /* Default color for text */
+}
+
+.grid-item:hover div h2,
+.grid-item:hover div p {
+    color: #fff; /* Change text color to white on hover */
 }
 
 .icon {
@@ -110,4 +149,3 @@ a:hover {
         grid-gap: 1%;
     }
 }
-
