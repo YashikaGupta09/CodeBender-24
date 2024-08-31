@@ -1,181 +1,177 @@
 * {
-            margin: 0;
-            padding: 0;
+  margin: 0;
+  padding: 0;
 
-        }
+}
 
-        body {
+body {
 
-            font-size: 14px;
-            font-weight: 400;
-            color: #777;
-            background-image: url("background.jpg");
-        }
+  font-size: 14px;
+  font-weight: 400;
+  color: #777;
+  background-image: url("background.jpg");
+}
 
-        h1 {
-            font-size: 36px;
-            color: #555;
-            font-weight: bold;
-        }
+h1 {
+  font-size: 36px;
+  color: #555;
+  font-weight: bold;
+}
 
-        h3 {
-            font-size: 24px;
-            color: #333;
-            font-weight: bold;
-        }
+h3 {
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+}
 
 /* Know more button css */
-      button a{
-          text-decoration: none;
-        color:black;       }
-        button a:hover{
-            text-decoration: none;
-          color:black;       }
+button a{
+text-decoration: none;
+color:white;       }
+button a:hover{
+  text-decoration: none;
+color:white;       }
 
 /* Background image */
-        #bg {
-          position: fixed;
-          top: 0;
-          left: 0;
-  z-index: -1;
-          /* Preserve aspet ratio */
-          min-width: 100%;
-          min-height: 100%;
-        }
+#bg {
+position: fixed;
+top: 0;
+left: 0;
+z-index: -1;
+/* Preserve aspet ratio */
+min-width: 100%;
+min-height: 100%;
+}
 
 /* Navbar Css */
 nav{
-  box-shadow: 5px 5px 10px #9e9e9e;
-  font-family: 'Montserrat', sans-serif;
+box-shadow: 5px 5px 10px #9e9e9e;
+font-family: 'Montserrat', sans-serif;
 
 }
 
 /* meet the codebenders heading css */
-    .heading{
-      text-align:center;
-      margin:100px;
-      font-family: 'Montserrat', sans-serif;
-    }
+.heading{
+text-align:center;
+margin:100px;
+font-family: 'Montserrat', sans-serif;
+}
 
 /* All teams heading css */
-    .topnav{
-     width: 80%;
-     text-align: center;
-     border-bottom: 3px solid #20d397;
-     line-height: 0.1em;
-     margin: 100px auto 20px;
-     font-size: 1.5rem;
-     font-family: 'Lato', sans-serif;
-      box-shadow: 0 2px 2px rgb(0 0 0 / 0.2);
-  }
+.topnav{
+width: 80%;
+text-align: center;
+border-bottom: 3px solid #20d397;
+line-height: 0.1em;
+margin: 100px auto 20px;
+font-size: 1.5rem;
+font-family: 'Lato', sans-serif;
+box-shadow: 0 2px 2px rgb(0 0 0 / 0.2);
+}
 
 
-  .topnav a {
-      background:#fff;
-      padding:0 10px;
-  }
+.topnav a {
+background:#fff;
+padding:0 10px;
+}
 
 /* All cards are in a flexbox,css for that: */
 .row{
-  display: flex;
-  flex-direction: row;
-  flex-wrap:wrap;
-  justify-content: center;
-  align-items: center;
+display: flex;
+flex-direction: row;
+flex-wrap:wrap;
+justify-content: center;
+align-items: center;
 }
 
-/*  cards css*/
-#team i {
-            font-size: 26px;
-            color: #555;
-        }
+/* Card styles */
+.card {
+border-radius: 5px;
+box-shadow: 5px 5px 15px #dd5a92;
+transition: all 0.3s ease-in;
+-webkit-transition: all 0.3s ease-in;
+-moz-transition: all 0.3s ease-in;
+overflow: hidden; /* Ensure no part of the image goes out of the card */
+height: 400px; /* Set a fixed height for the card */
+position: relative; /* For positioning the image */
+}
 
-        #team p {
-            font-weight: 500;
-        }
+.card-body {
+padding: 0px!important;
+}
 
-        #team .card {
-            border-radius: 0;
-            box-shadow: 5px 5px 15px #FF9F45;
-            transition: all 0.3s ease-in;
-            -webkit-transition: all 0.3s ease-in;
-            -moz-transition: all 0.3s ease-in;
-        }
+/* Card compartments (Top and Bottom) */
+.top-compartment {
+text-align: center;
+background-color: #dd5a92; /* Pink background for upper compartment */
+height: 30%; /* Top compartment takes 30% of the card height */
+display: flex;
+align-items: center; /* Center content vertically */
+justify-content: center; /* Center content horizontally */
+position: relative; /* For image positioning */
+}
 
-        #team .card:hover {
-            background: #FF9F45;
-            color: #fff;
-            border-radius: 5px;
-            border: none;
-            box-shadow: 5px 5px 10px #9e9e9e;
-        }
+.bottom-compartment {
+text-align: center;
+background-color: white; /* White background for lower compartment */
+height: 70%; /* Bottom compartment takes 70% of the card height */
+display: flex;
+flex-direction: column;
+justify-content: center; /* Center content vertically */
+padding: 20px; /* Add padding to the bottom compartment */
+}
+
+/* Profile image styles */
+.profile-image {
+width: 110px;  /* Adjust image size */
+height: 110px;
+border-radius: 50%;
+border: 5px solid #fff; /* Optional: white border around the image */
+box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+position: absolute;
+bottom: -40px; /* Position at the border */
+left: 50%;
+transform: translateX(-50%);
+}
 
 
 
-  /* Know more button CSS */
-  .button-2 {
+/* Card hover effects */
+.card:hover {
+box-shadow: 5px 5px 10px #9e9e9e;
+}
 
-    background: #FF9F45;
-    border-radius: 8px;
-    border-width: 0;
-    color: #333333;
-    cursor: pointer;
-    display: inline-block;
-    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 20px;
-    list-style: none;
-    margin: 0;
-    padding: 10px 12px;
-    text-align: center;
-    transition: all 200ms;
-    vertical-align: baseline;
-    white-space: nowrap;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-  }
-  .button-2:hover{
-background-color: white;
-  }
+/* Know more button CSS */
+.button-2 {
 
+background: #dd5a92;
+border-radius: 8px;
+border-width: 0;
+cursor: pointer;
+display: inline-block;
+font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+font-weight: 500;
+line-height: 20px;
+list-style: none;
+margin: 0;
+padding: 10px 12px;
+text-align: center;
+transition: all 200ms;
+vertical-align: baseline;
+white-space: nowrap;
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+}
 
 /* Footer css */
-  footer{
-    margin:100px;
-  }
+footer{
+margin:100px;
+}
 .footer-a{
-  color:#20d397;
+color:#20d397;
 }
 .footer-a:hover{
-  color:#1ec78e;
-}
-
-
-/* changes in navbar */
- 
-.navbar .navbar-nav .nav-link {
-  font-weight: bolder;
-  color: #dd5a92;
-}
-
-.navbar .navbar-nav .nav-link:hover {
-  color: #0696cd;
-}
-
-.navbar .navbar-brand {
-  font-weight: bold;
-  color: #dd5a92;
-}
-
-.navbar .navbar-brand:hover {
-  color: #0696cd;
-}
-.navbar{
-  background-color: rgb(243, 230, 230);
-  box-shadow: 0 4px 8px rgba(221, 139, 139, 0.2);
-}
-.navbr-toggler{
-  color:#333333
+color:#1ec78e;
 }
