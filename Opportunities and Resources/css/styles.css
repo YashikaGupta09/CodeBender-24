@@ -151,3 +151,29 @@ a:hover {
         grid-gap: 1%;
     }
 }
+
+/* changes in navbar */
+ 
+    .navbar .navbar-nav .nav-link {
+        font-weight: bold;
+        color: #dd5a92;
+    }
+
+    .navbar .navbar-nav .nav-link:hover {
+        color: #0696cd;
+    }
+
+    .navbar .navbar-brand {
+        font-weight: bold;
+        color: #dd5a92;
+    }
+
+    .navbar .navbar-brand:hover {
+        color: #0696cd;
+    }
+  .navbar{
+    background-color: rgb(243, 230, 230);
+    box-shadow: 0 4px 8px rgba(221, 139, 139, 0.2);
+  }
+
+ 
